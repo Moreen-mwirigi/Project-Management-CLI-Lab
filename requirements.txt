@@ -1,0 +1,8 @@
+certifi==2026.6.17
+distlib==0.4.3
+filelock==3.29.7
+packaging==26.2
+pipenv==2026.6.2
+platformdirs==4.10.0
+python-discovery==1.4.4
+virtualenv==21.6.1
