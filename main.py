@@ -62,7 +62,9 @@ def main():
 
     elif args.command == "list-projects":
         table = Table(title=f"Projects for {args.email}")
-        table.add_column("ID"); table.add_column("Title"); table.add_column("Progress")
+        table.add_column("ID")
+        table.add_column("Title")
+        table.add_column("Progress")
         for p in [p for p in projects if p.owner_email == args.email]:
             table.add_row(str(p.id), p.title, f"{p.get_progress()}%")
         console.print(table)
