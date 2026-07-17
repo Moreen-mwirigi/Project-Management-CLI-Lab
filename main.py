@@ -37,11 +37,12 @@ def main():
     args = parser.parse_args()
     users, projects, tasks = load_data()
 
-    if args.command == "add-users":
+    if args.command == "add-user":
         user = User(args.name, args.email)
-        user.append(user)
+        users.append(user)
         logging.info(f"Added user {user.email}")
         print(f"User added: {user}")
+        save_data(users, projects, tasks)
 
     elif args.command == "add-project":
         user = next((u for u in users if u.email == args.email), None)
@@ -63,7 +64,7 @@ def main():
         table = Table(title=f"Projects for {args.email}")
         table.add_column("ID"); table.add_column("Title"); table.add_column("Progress")
         for p in [p for p in projects if p.owner_email == args.email]:
-            table.add_row(str(p.id), p.title, f "{p.get_progress()}%")
+            table.add_row(str(p.id), p.title, f"{p.get_progress()}%")
         console.print(table)
 
     elif args.command == "complete-task":
