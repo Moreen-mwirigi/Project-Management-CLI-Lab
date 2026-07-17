@@ -1,7 +1,7 @@
 class Person:
     def __init__(self, name, email):
         self.name = name
-        self._email = email
+        self.email = email
 
     @property
     def email (self):
@@ -9,7 +9,7 @@ class Person:
     
     @email.setter
     def email (self, value):
-        if "@" not in value:
+        if "@" not in value or "." not in value:
             raise ValueError("Invalid email format")
         self._email = value
 
