@@ -1,0 +1,38 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Bob",
+            "email": "bob@gmail.com",
+            "project_ids": [
+                1
+            ]
+        },
+        {
+            "id": 2,
+            "name": "jane",
+            "email": "jane@yahoo.com",
+            "project_ids": []
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "title": "Website",
+            "description": "Build site",
+            "owner_email": "bob@gmail.com",
+            "due_date": "2026-09-06",
+            "task_ids": [
+                1
+            ]
+        }
+    ],
+    "tasks": [
+        {
+            "id": 1,
+            "title": "Web Design",
+            "project_id": 1,
+            "status": "DONE"
+        }
+    ]
+}
