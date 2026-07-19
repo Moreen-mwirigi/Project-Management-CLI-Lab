@@ -13,6 +13,14 @@
             "name": "jane",
             "email": "jane@yahoo.com",
             "project_ids": []
+        },
+        {
+            "id": 3,
+            "name": "Alex",
+            "email": "alex@mail.com",
+            "project_ids": [
+                2
+            ]
         }
     ],
     "projects": [
@@ -23,8 +31,17 @@
             "owner_email": "bob@gmail.com",
             "due_date": "2026-09-06",
             "task_ids": [
-                1
+                1,
+                2
             ]
+        },
+        {
+            "id": 2,
+            "title": "Application",
+            "description": "Build portifolio",
+            "owner_email": "alex@mail.com",
+            "due_date": "2026-12-31",
+            "task_ids": []
         }
     ],
     "tasks": [
@@ -33,6 +50,12 @@
             "title": "Web Design",
             "project_id": 1,
             "status": "DONE"
+        },
+        {
+            "id": 2,
+            "title": "Desig UI",
+            "project_id": 1,
+            "status": "TODO"
         }
     ]
 }

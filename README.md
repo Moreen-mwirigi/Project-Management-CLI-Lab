@@ -12,10 +12,11 @@ A command-line tool to manage users, projects and tasks With persistent JSON sto
 ## Installation.
 1. Clone the repository.
 2. Install dependencies with Pipenv
-    pipenv install
-    pipenv installrich pytest
+    `pipenv install`
+    `pip install -r requirements.txt`
 3. Activate the virtyal environment.
-    pipenv shell
+    `pipenv shell`
+
 
 ## Usage
 - Run all commands with :
@@ -25,7 +26,7 @@ A command-line tool to manage users, projects and tasks With persistent JSON sto
 2. Add a Project
     pipenv run `python main.py add-project --title "Application" --desc "Build portifolio" --email "alex@mail.com" --due "2026-12-31"`
 3. List Projects for a user
-    pipenv run `python main.py list-projects --email"alex@mail.com"`
+    pipenv run `python main.py list-projects --email "alex@mail.com"`
 4. Add a Task to a project
     pipenv run `python main.py add-task --title "Desig UI" --project-id 1`
 5. Update Task Status
