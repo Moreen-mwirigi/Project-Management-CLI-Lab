@@ -31,8 +31,12 @@ def main():
     p4 = subparsers.add_parser("list-projects")
     p4.add_argument("--email", required=True)
 
-    p5 = subparsers.add_parser("complete-task")
+    p5 = subparsers.add_parser("update-task")
     p5.add_argument("--task-id", type=int, required=True)
+    p5.add_argument("--status", required=True, choices=['TODO', 'IN_PROGRESS', 'DONE'])
+
+    p6 = subparsers.add_parser("complete-task")
+    p6.add_argument("--task-id", type=int, required=True)
 
     args = parser.parse_args()
     users, projects, tasks = load_data()
@@ -61,6 +65,7 @@ def main():
         print(f"Task added: {task}")
 
     elif args.command == "list-projects":
+        console = Console()
         table = Table(title=f"Projects for {args.email}")
         table.add_column("ID")
         table.add_column("Title")
