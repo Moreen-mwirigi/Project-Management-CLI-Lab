@@ -1,5 +1,5 @@
 from datetime import datetime
-from dateutil import parser
+#from dateutil import parser
 
 class Project:
     _id_counter = 1
@@ -10,7 +10,7 @@ class Project:
         self.title = title
         self.description = description
         self.owner_email = owner_email
-        self.due_date = parser.parse(due_date).date()
+        self.due_date = datetime.strptime(due_date, "%Y-%m-%d").date()
         self.tasks = []
 
     def add_task(self, task):
